@@ -21,7 +21,6 @@ export const addContact = createAsyncThunk(
   async (data, { rejectWithValue }) => {
     try {
       const res = await API.postContact(data);
-      console.log(res);
       if (res.status > 300) {
         throw new Error(res);
       }
